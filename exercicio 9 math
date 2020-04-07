@@ -1,0 +1,38 @@
+import java.util.Scanner;
+  public class Main {
+    public static void main(String[] args) {
+    Scanner leitor = new Scanner(System.in);
+    System.out.println("valor de x (devera ser entre -32 a 32)");      
+    double x = leitor.nextInt();
+    System.out.println("valor de y(devera ser entre -32 a 32");
+    double y = leitor.nextInt();
+    
+
+    if(-32<= x && x<=32 && -32<=y && y<=32){
+      double a = -200*Math.exp(-0.2 * Math.sqrt(Math.pow(x,2) + Math.pow(y,2)));
+      System.out.println(a);
+
+      }else{
+        System.out.println("renicie voce colocou um valor fora do permitido ");
+
+
+          }
+
+
+    
+
+    
+
+
+
+
+    
+    
+  }
+}
+
+
+    
+
+    
+
