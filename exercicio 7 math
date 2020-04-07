@@ -1,0 +1,33 @@
+import java.util.Scanner;
+  public class Main {
+    public static void main(String[] args) {
+    Scanner leitor = new Scanner(System.in);
+    System.out.println("valor de x (devera ser entre -15 a -5)");      
+    int x = leitor.nextInt();
+    System.out.println("valor de y(devera ser entre -3 a 3");
+    int y = leitor.nextInt();
+    
+
+    if(-15<= x && x<=-5 && -3<=y && y<=3){
+      double a = 100*Math.sqrt(Math.abs(y - 0.01*Math.pow(x,2)))+0.01*Math.abs(x+10);
+      System.out.println(a);
+
+
+      }else{
+        System.out.println("renicie voce colocou um valor fora do permitido ");
+
+
+      }
+
+
+    
+
+    
+
+
+
+
+    
+    
+  }
+}
