@@ -1,0 +1,13 @@
+class Main {
+  public static void main(String[] args) {
+    double x = 15.5;
+
+    double a = Math.cbrt(x);
+
+    double b = Math.log(x);
+
+    double c = Math.min(Math.tan(Math.pow(x, 2)), Math.tanh(Math.pow(x,3)));
+
+    System.out.println((a+b)-c);
+  }
+}
