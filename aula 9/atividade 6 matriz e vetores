@@ -1,0 +1,35 @@
+class Main {
+
+  public static int[][] fazerMult (int vetorA[][],int vetorB[][] ){
+    int[][] fazerMult= new int [2][2];
+
+    for(int i=0;i<fazerMult.length;i++){
+      for(int j=0 ; j < fazerMult[i].length; j++){
+        for(int z=0 ; z < vetorA[i].length; z++){
+          fazerMult[i][j] = vetorA[i][z] * vetorB[z][j] + fazerMult[i][j];
+        }
+      }
+    }
+    
+        
+    return fazerMult;
+
+  }
+  public static void main(String[] args) {
+    int [][] vetorA= {{1,2},{3,4}};
+    int [][] vetorB= {{-1,3},{4,2}};
+    int[][]  n= new int [vetorA.length][vetorB[0].length];
+
+    n=fazerMult(vetorA,vetorB);
+    for (int i=0 ; i < 2; i++){
+      for(int j = 0; j < 2; j++){
+        System.out.print( n[i][j] );
+        System.out.print(" ");
+        
+      }
+      System.out.println();
+    }
+
+  }
+  
+}
