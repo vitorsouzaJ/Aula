@@ -1,0 +1,34 @@
+class Main {
+
+
+
+
+
+    public static int [][] criarMatriz(int[] vetorA,int[]vetorB){
+    int [][] criarMatriz=new int[2][vetorA.length];
+     criarMatriz[0]=vetorA;
+     criarMatriz[1]=vetorB;
+     return criarMatriz;
+
+  
+  }
+  public static void main(String[] args) {
+    int [] vetorA = {1,2,3};
+    int[] vetorB = {3,4,5};
+    int[][] criarMatrizA = criarMatriz(vetorA,vetorB);
+    for (int i = 0 ;  i < criarMatrizA.length; i++){
+      for (int j = 0; j < criarMatrizA[i].length; j++){
+        System.out.print(criarMatrizA[i][j]); 
+      }
+    System.out.println();
+        
+        
+        
+             
+  
+             
+    }
+     
+  }
+} 
+
