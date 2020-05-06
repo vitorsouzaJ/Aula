@@ -1,0 +1,249 @@
+import java.util.Scanner;
+  public class Main {
+
+     public static boolean volume(String a){
+        boolean N = false;
+        if (a.equals("volume")){
+          
+
+          return N;
+          
+          }else{
+            N = true;
+            return N ;         
+            }
+          
+          }
+        
+
+    public static void main(String[] args) {
+  boolean M = true;
+while(M==true){
+    
+
+    Scanner leitor = new Scanner(System.in);
+    System.out.println("Qual figura você gostaria de calcular"); 
+    System.out.println("(Figuras disponiveis): ");
+    System.out.println("prisma, cubo, paralelepípedo,cone, cilindro, esfera "); 
+
+    String figura = leitor.next().toLowerCase();
+
+   
+    System.out.println("Gostaria de calcular a área ou volume do figura "+figura);      
+    String area = leitor.next().toLowerCase();
+    
+    
+    System.out.println(); 
+
+    boolean a = volume(area);
+
+
+
+    if (figura.equals("prisma")){
+      System.out.println("==== prisma de 6 lados =====");
+      
+
+      System.out.println("Altura do prisma");
+      int alturaPrisma = leitor.nextInt();
+
+      System.out.println("Base do prisma");
+      int basePrisma = leitor.nextInt();
+      
+      if (true == a){ 
+        
+        double ab1 = ( Math.pow(basePrisma,2)* Math.sqrt(3))/ 4;
+        double al = 6*basePrisma * alturaPrisma;
+        double ab= 0.0;
+        for (int i = 1; i <= 6; i++){
+          ab= ab1 +ab;
+
+        }
+        double at = (ab * 2) +al;
+
+        System.out.println(at+" cm²"); //area
+        
+      }else{ 
+        double ab = (6* Math.pow(basePrisma,2)* Math.sqrt(3))/ 4;
+        double volume = ab*alturaPrisma;
+       System.out.println(volume+ " cm³"); //volume
+      }
+
+
+
+
+
+    
+    }else if(figura.equals("cubo")){
+      System.out.println("==== CUBO =====");
+
+      System.out.println("Altura do cubo");
+      int alturaCubo = leitor.nextInt();
+
+      if (true == a){ 
+        double at = 6*Math.pow(alturaCubo,2);
+        System.out.println(at+ " cm²"); //area
+
+      }else{ 
+        double volume = Math.pow(alturaCubo,3);
+       System.out.println(volume+ " cm³"); //volume
+      }
+           
+
+
+
+    }else if(figura.equals("paralelepípedo")){ 
+      System.out.println("==== PARALELEPÍPEDO =====");
+
+      System.out.println("Altura do paralelepípedo");
+      int alturaPar = leitor.nextInt();
+
+
+      System.out.println("Largura do paralelepípedo");
+      int larguraPar = leitor.nextInt();
+
+
+      System.out.println("comprimento do paralelepípedo");
+      int comprPar = leitor.nextInt();
+
+      
+      if (true == a){ 
+        double at= ((larguraPar*alturaPar)*2 ) +  ((comprPar*alturaPar)*2)+((comprPar * larguraPar)*2);
+        
+
+
+        System.out.println(at+ " cm²"); //area
+      }else{
+        double volume= larguraPar*comprPar* alturaPar;
+        
+
+       System.out.println(volume+" cm³"); //volume
+      }
+
+
+
+
+
+    }else if(figura.equals("cone")){ 
+     System.out.println("==== CONE =====");
+
+
+
+						
+			System.out.println("Raio da base do cone: ");
+			int raioCone = leitor.nextInt(); 
+						
+
+      if (true == a){
+        
+        System.out.println("Geratriz do cone: ");
+			  int gerarCone = leitor.nextInt();
+
+       double at = Math.PI * gerarCone * (raioCone + gerarCone);
+
+
+        System.out.println(at+ " cm²");//area
+      }else{ 
+    	System.out.println("Altura do cone: ");
+      int alturaCone= leitor.nextInt();
+
+      double volume = (Math.PI * Math.pow(raioCone,2)* alturaCone)/3;
+        
+
+       System.out.println(volume+ " cm³"); //volume
+      }
+           
+
+
+
+
+    }else if(figura.equals("cilindro")){ 
+           System.out.println("==== CILINDRO =====");
+
+
+						
+					System.out.println("Altura do cilindro: ");
+		      int alturaCilindro= leitor.nextInt();
+
+
+      if (true == a){ 
+        System.out.println("Raio da base do cilindro: ");
+        int raioCilindro= leitor.nextInt();
+        double at = 2 * Math.PI * raioCilindro *  (alturaCilindro + raioCilindro);
+
+        System.out.println(at+ " cm²");//area
+      }else{ 
+    		System.out.println("Diametro do cilindro: ");
+		      int diametroCilindro= leitor.nextInt();
+
+          double volume = Math.PI * Math.pow(diametroCilindro,2) * alturaCilindro;
+
+        
+       System.out.println(volume+ " cm³"); //volume 
+      }
+    
+
+
+    }else if(figura.equals("esfera")){
+
+    	System.out.println("Raio da esfera");
+		   int raioEsfera= leitor.nextInt();      
+
+      if (true == a){ 
+        double at = 4 * Math.PI * Math.pow(raioEsfera,2);
+
+        System.out.println(at+ " cm²"); //area
+
+      }else{
+        double volume=(4 * Math.PI * Math.pow(raioEsfera,3))/3;
+        
+       System.out.println(volume+ " cm³"); //volume
+
+      }
+
+
+       
+
+           
+
+
+    }else{ 
+      System.out.println("vc digitou errado"); 
+
+      }
+    
+    System.out.println();
+    System.out.println("Se quiser continar calculando digite *sim*, se nao digite *encerrar*");
+		   String m = leitor.next().toLowerCase();
+
+      if (m.equals("sim")){
+       
+
+      }else if(m.equals("encerrar")){
+        M=false;
+        
+
+      }else{
+        System.out.println();
+      
+        System.out.println("Não entendemos o que você digitou entao vamos encerrar");
+        M=false;
+
+
+
+      }
+    
+
+    
+  
+
+}
+        System.out.println();
+        System.out.println();
+
+        System.out.println("programa encerrado");
+
+
+
+    
+  }
+}
