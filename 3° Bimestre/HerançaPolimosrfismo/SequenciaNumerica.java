@@ -1,19 +1,19 @@
-package HerançaPolimosrfismo;
+package HeranÃ§aPolimosrfismo;
 
 
 public class SequenciaNumerica {
 	
 	protected int numeroInicial;
 	protected int numeroSequencia;
-	protected int quant ;
+	protected int quantidadeNumerosGerados ;
 
 	
-	public int getQuant() {
-		return quant;
+	public int getQuantidadeNumerosGerados () {
+		return quantidadeNumerosGerados ;
 	}
 
-	public void setQuant(int quant) {
-		this.quant = quant;
+	public void setQuant(int quantidadeNumerosGerados) {
+		this.quantidadeNumerosGerados  = quantidadeNumerosGerados;
 	}
 
 	public int getNumeroInicial() {
@@ -34,10 +34,10 @@ public class SequenciaNumerica {
 	}
 	
 
-	public void calculo(int numeroInicial, int numeroSequencia, int a, int quant ) {
+	public void calculo(int numeroInicial, int numeroSequencia, int a, int quantidadeNumerosGerados ) {
 		this.numeroSequencia = numeroSequencia;
 		this.numeroInicial = numeroInicial;
-		this.quant = quant;
+		this.quantidadeNumerosGerados = quantidadeNumerosGerados;
 		System.out.println("Selecionar qual sequencia numerica deseja");
 		
 	}
