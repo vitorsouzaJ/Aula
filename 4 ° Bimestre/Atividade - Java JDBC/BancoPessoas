@@ -1,0 +1,9 @@
+CREATE TABLE "Pessoas" (
+	"PessoaNome"	Varchar(50),
+	"PessoaNascimento"	DATE,
+	"PessoaBairro"	Varchar(50),
+	"PessoaCidade"	Varchar(50),
+	"PessoaSexo"	Varchar(50),
+	"PessoaCPF"	Int,
+	CONSTRAINT "PK_PESSOAS" PRIMARY KEY("PessoaCPF")
+);
